@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Banner from './components/Banner';
 
 export default function Home() {
   return (
     <section>
       <div>
-        <h1>Welcome to Next.js!</h1>
+      <Banner></Banner>
       </div>
 </section>
   );
