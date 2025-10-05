@@ -1,14 +1,13 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Search, User, Heart, ShoppingCart } from "lucide-react";
 
 const Navbar = () => {
   return (
     <header className="w-full bg-white pb-4">
       {/* 🔹 Top Row */}
-      <div className="max-w-7xl mx-auto smpx-6 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto md:px-1 px-6 flex items-center justify-between h-16">
         {/* Left Section */}
         <div className="flex items-center gap-6">
           <h2 className="text-xl font-semi-bold">eCommerce</h2>
