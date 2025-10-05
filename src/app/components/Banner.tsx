@@ -30,7 +30,7 @@ const slides: Slide[] = [
       oldPrice: "$250.00",
       discount: "50%",
       reviews: "1,245 reviews",
-      image: "/Hair Drier4.jpg",
+      image: "/off.jpg",
     },
   },
   {
@@ -43,7 +43,7 @@ const slides: Slide[] = [
       oldPrice: "$1200.00",
       discount: "20%",
       reviews: "3,210 reviews",
-      image: "/Hair Drier4.jpg",
+      image: "/off2.jpg",
     },
   },
   {
@@ -56,7 +56,7 @@ const slides: Slide[] = [
       oldPrice: "$1800.00",
       discount: "15%",
       reviews: "870 reviews",
-      image: "/Hair Drier4.jpg",
+      image: "/off3.jpg",
     },
   },
   {
@@ -82,7 +82,7 @@ const slides: Slide[] = [
       oldPrice: "$299.00",
       discount: "30%",
       reviews: "1,120 reviews",
-      image: "/Hair Drier4.jpg",
+      image: "/off4.jpg",
     },
   },
 ];
