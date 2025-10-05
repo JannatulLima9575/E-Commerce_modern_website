@@ -25,7 +25,7 @@ const products: Product[] = [
 
 export default function ProductSection() {
   return (
-    <section className="py-10 px-8">
+    <section className="max-w-7xl mx-auto py-10 px-8">
       <h1 className="text-2xl font-bold mb-6">Popular Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {products.map((item) => (
