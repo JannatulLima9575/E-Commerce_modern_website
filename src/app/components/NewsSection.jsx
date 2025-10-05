@@ -6,38 +6,38 @@ const newsData = [
   {
     id: 1,
     title: "AI Revolution in Education",
-    desc: "AI is transforming how students learn and teachers teach across the globe.",
-    img: "/images/news1.jpg",
+    desc: "AI is transforming how students learn and teachers teach worldwide.",
+    img: "/news1.jpg",
   },
   {
     id: 2,
     title: "Tech Expo 2025 Highlights",
     desc: "The biggest tech innovations of 2025 unveiled at Global Expo.",
-    img: "/images/news2.jpg",
+    img: "/news2.jpg",
   },
   {
     id: 3,
     title: "Bangladesh in Digital Era",
-    desc: "Digital Bangladesh 2.0 program aims to boost innovation and startups.",
-    img: "/images/news3.jpg",
+    desc: "Digital Bangladesh 2.0 aims to boost innovation and startups.",
+    img: "/news3.jpg",
   },
   {
     id: 4,
     title: "Next.js 15 Released",
-    desc: "Next.js 15 brings new features, faster routing, and better performance.",
-    img: "/images/news4.jpg",
+    desc: "Next.js 15 introduces new features and faster routing.",
+    img: "/news4.jpg",
   },
   {
     id: 5,
     title: "Women in Tech Summit",
-    desc: "Empowering women developers in the growing tech ecosystem.",
-    img: "/images/news5.jpg",
+    desc: "Empowering women developers across the global tech ecosystem.",
+    img: "/news5.jpg",
   },
   {
     id: 6,
     title: "Future of Web Development",
-    desc: "The shift towards full-stack frameworks like Next.js and Remix.",
-    img: "/images/news6.jpg",
+    desc: "Full-stack frameworks like Next.js and Remix are the future.",
+    img: "/news6.jpg",
   },
 ];
 
@@ -50,9 +50,9 @@ const NewsSection = () => {
   // ✅ Responsive card count per slide
   useEffect(() => {
     const updateCardsPerSlide = () => {
-      if (window.innerWidth < 640) setCardsPerSlide(1); // mobile
-      else if (window.innerWidth < 1024) setCardsPerSlide(2); // tablet
-      else setCardsPerSlide(3); // desktop
+      if (window.innerWidth < 640) setCardsPerSlide(1); // Mobile
+      else if (window.innerWidth < 1024) setCardsPerSlide(2); // Tablet
+      else setCardsPerSlide(3); // Desktop
     };
     updateCardsPerSlide();
     window.addEventListener("resize", updateCardsPerSlide);
@@ -76,29 +76,36 @@ const NewsSection = () => {
 
   return (
     <div
-      className="max-w-7xl mx-auto bg-gray-100 py-10 overflow-hidden"
+      className="max-w-7xl mx-auto bg-gray-100 py-8 overflow-hidden px-4"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
 
-      <div className="flex justify-center flex-wrap gap-6 transition-all duration-700 ease-in-out">
+      {/* Cards */}
+      <div className="flex justify-center flex-wrap gap-6">
         {visibleNews.map((news) => (
           <div
             key={news.id}
-            className="bg-white shadow-lg rounded-2xl w-full sm:w-[45%] lg:w-[30%] hover:shadow-xl transition-transform transform hover:-translate-y-2"
+            className="w-full sm:w-[48%] lg:w-[30%] bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-transform transform hover:-translate-y-2"
           >
-            <Image
-              src={news.img}
-              alt={news.title}
-              width={400}
-              height={250}
-              className="rounded-t-2xl object-cover w-full h-48"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2 text-gray-800">
+            <div className="relative w-full h-56 sm:h-64 lg:h-72">
+              <Image
+                src={news.img}
+                alt={news.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw,
+                        (max-width: 1200px) 50vw,
+                        33vw"
+              />
+            </div>
+            <div className="p-3 sm:p-4 text-center">
+              <h3 className="text-sm sm:text-base font-semibold mb-1 text-gray-800">
                 {news.title}
               </h3>
-              <p className="text-gray-600 text-sm">{news.desc}</p>
+              <p className="text-xs sm:text-sm text-gray-600 leading-snug">
+                {news.desc}
+              </p>
             </div>
           </div>
         ))}
